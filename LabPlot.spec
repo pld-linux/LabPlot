@@ -32,9 +32,11 @@ cp -f /usr/share/automake/config.sub admin
 
 %install
 rm -rf $RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT%{_desktopdir}
 %{__make} install \
 	DESTDIR="$RPM_BUILD_ROOT"
 
+mv $RPM_BUILD_ROOT%{_datadir}/applnk/Applications/LabPlot.desktop $RPM_BUILD_ROOT%{_desktopdir}
 %find_lang %{name} --with-kde
 
 %clean
@@ -47,16 +49,8 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README TODO INSTALL ChangeLog CHANGES FEATURES LabPlot.lsm
 %attr(755,root,root) %{_bindir}/LabPlot
-%{_datadir}/applnk/Applications/LabPlot.desktop
+%{_desktopdir}/LabPlot.desktop
 %{_datadir}/mimelnk/application/x-lpl.desktop
 %{_datadir}/apps/LabPlot/
-%{_datadir}/icons/hicolor/64x64/mimetypes/lpl.png
-%{_datadir}/icons/locolor/16x16/apps/LabPlot.png
-%{_datadir}/icons/locolor/16x16/mimetypes/lpl.png
-%{_datadir}/icons/locolor/32x32/apps/LabPlot.png
-%{_datadir}/icons/locolor/32x32/mimetypes/lpl.png
-%{_datadir}/icons/hicolor/48x48/apps/LabPlot.png
-%{_datadir}/icons/hicolor/48x48/mimetypes/lpl.png
-%{_libdir}/lib*.so.*.*.*
-%lang(en) %{_kdedocdir}/en/%{name}
-%lang(de) %{_kdedocdir}/de/%{name}
+%{_iconsdir}/*/*/*/*.png
+%attr(755,root,root) %{_libdir}/lib*.so.*.*.*
