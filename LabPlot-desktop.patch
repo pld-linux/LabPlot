@@ -13,5 +13,5 @@
  Protocols=file;ftp
  ServiceTypes=Browser/View
  X-KDE-Library=libLabPlot
-+Categories=Education;Science;X-Plotting;
++Categories=Qt;KDE;Education;Science;X-Plotting;
 +# vi: encoding=utf-8
