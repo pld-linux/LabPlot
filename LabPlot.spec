@@ -1,16 +1,18 @@
 Summary:	Function and Data Plotter
 Summary(pl):	Wykre¶lacz funkcji i danych
 Name:		LabPlot
-URL:		http://labplot.sourceforge.net/
 Version:	1.3.1
 Release:	1
+License:	GPL
+Group:		Applications/Math
 Source0:	http://dl.sourceforge.net/labplot/%{name}-%{version}.tar.bz2
 # Source0-md5:	a6001c52eaee6518b9c5965cfc826f2f
-Group:		Applications/Math
-License:	GPL
+URL:		http://labplot.sourceforge.net/
+BuildRequires:	automake
 BuildRequires:	fftw3-devel
 BuildRequires:	gsl-devel
 BuildRequires:	kdelibs-devel
+BuildRequires:	rpmbuild(macros) >= 1.129
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -33,8 +35,9 @@ cp -f /usr/share/automake/config.sub admin
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_desktopdir}
+
 %{__make} install \
-	DESTDIR="$RPM_BUILD_ROOT"
+	DESTDIR=$RPM_BUILD_ROOT
 
 mv $RPM_BUILD_ROOT%{_datadir}/applnk/Applications/LabPlot.desktop $RPM_BUILD_ROOT%{_desktopdir}
 %find_lang %{name} --with-kde
@@ -49,8 +52,8 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README TODO INSTALL ChangeLog CHANGES FEATURES LabPlot.lsm
 %attr(755,root,root) %{_bindir}/LabPlot
+%attr(755,root,root) %{_libdir}/lib*.so.*.*.*
 %{_desktopdir}/LabPlot.desktop
 %{_datadir}/mimelnk/application/x-lpl.desktop
-%{_datadir}/apps/LabPlot/
+%{_datadir}/apps/LabPlot
 %{_iconsdir}/*/*/*/*.png
-%attr(755,root,root) %{_libdir}/lib*.so.*.*.*
