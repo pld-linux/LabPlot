@@ -9,6 +9,7 @@ Source0:	http://dl.sourceforge.net/labplot/%{name}-%{version}.tar.bz2
 # Source0-md5:	a6001c52eaee6518b9c5965cfc826f2f
 Patch0:		%{name}-desktop.patch
 URL:		http://labplot.sourceforge.net/
+BuildRequires:	ImageMagick-c++-devel
 BuildRequires:	automake
 BuildRequires:	fftw3-devel
 BuildRequires:	gsl-devel
