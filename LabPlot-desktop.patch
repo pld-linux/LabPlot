@@ -1,0 +1,17 @@
+--- src/LabPlot.desktop~	2004-01-10 21:36:12.000000000 +0100
++++ src/LabPlot.desktop	2004-09-14 14:49:56.868517008 +0200
+@@ -7,10 +7,13 @@
+ DocPath=LabPlot/index.html
+ Comment=An application for plotting of data sets and functions
+ Comment[de]=Ein Programm zum Plotten von Daten und Funktionen
+-Terminal=0
++Comment[pl]=Program do wykreślania funkcji oraz manipulacji na danych
++Terminal=false
+ Name=LabPlot
+ Name[de]=LabPlot
+ MimeType=application/x-LabPlot-plot
+ Protocols=file;ftp
+ ServiceTypes=Browser/View
+ X-KDE-Library=libLabPlot
++Categories=Science;X-Plotting;
++# vi: encoding=utf-8
