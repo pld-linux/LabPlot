@@ -5,6 +5,7 @@ URL:		http://labplot.sourceforge.net/
 Version:	1.3.1
 Release:	1
 Source0:	http://dl.sourceforge.net/labplot/%{name}-%{version}.tar.bz2
+# Source0-md5:	a6001c52eaee6518b9c5965cfc826f2f
 Group:		Applications/Math
 License:	GPL
 BuildRequires:	fftw3-devel
