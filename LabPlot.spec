@@ -13,7 +13,7 @@ BuildRequires:	automake
 BuildRequires:	fftw3-devel
 BuildRequires:	gsl-devel
 BuildRequires:	kdelibs-devel
-BuildRequires:	rpmbuild(macros) >= 1.129
+BuildRequires:	rpmbuild(macros) >= 1.213
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -30,7 +30,7 @@ export kde_htmldir=%{_kdedocdir}
 export kde_libs_htmldir=%{_kdedocdir}
 cp -f /usr/share/automake/config.sub admin
 %configure \
-%ifarch sparc sparc64 ppc ppc64 amd64
+%ifarch %{x8664} sparc sparc64 ppc ppc64
 	--disable-cdf \
 %endif
 	--with-qt-libraries=%{_libdir}
