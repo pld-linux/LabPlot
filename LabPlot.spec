@@ -2,7 +2,7 @@ Summary:	Function and Data Plotter
 Summary(pl):	Wykre¶lacz funkcji i danych
 Name:		LabPlot
 Version:	1.4.0
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications/Math
 Source0:	http://dl.sourceforge.net/labplot/%{name}-%{version}.tar.bz2
@@ -44,6 +44,10 @@ install -d $RPM_BUILD_ROOT%{_desktopdir}
 	DESTDIR=$RPM_BUILD_ROOT
 
 mv $RPM_BUILD_ROOT%{_datadir}/applnk/Applications/LabPlot.desktop $RPM_BUILD_ROOT%{_desktopdir}
+
+rm -f $RPM_BUILD_ROOT%{_mandir}/man1/irc.1
+echo ".so ircII.1" > $RPM_BUILD_ROOT%{_mandir}/man1/irc.1
+
 %find_lang %{name} --with-kde
 
 %clean
