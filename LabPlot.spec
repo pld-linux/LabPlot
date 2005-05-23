@@ -45,8 +45,8 @@ install -d $RPM_BUILD_ROOT%{_desktopdir}
 
 mv $RPM_BUILD_ROOT%{_datadir}/applnk/Applications/LabPlot.desktop $RPM_BUILD_ROOT%{_desktopdir}
 
-rm -f $RPM_BUILD_ROOT%{_mandir}/man1/irc.1
-echo ".so ircII.1" > $RPM_BUILD_ROOT%{_mandir}/man1/irc.1
+rm -f $RPM_BUILD_ROOT%{_mandir}/man1/labplot.1
+echo ".so LabPlot.1" > $RPM_BUILD_ROOT%{_mandir}/man1/labplot.1
 
 %find_lang %{name} --with-kde
 
