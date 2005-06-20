@@ -24,14 +24,14 @@ Program do wykre¶lania funkcji oraz manipulacji na danych.
 
 %package static
 Summary:	LabPlot static libraries
-Summary(pl):	Biblioteki statytczne LabPlot
+Summary(pl):	Biblioteki statyczne LabPlot
 Group:		Development/Libraries
 
 %description static
-LabPlot static libraries
+LabPlot static libraries.
 
 %description static -l pl
-Biblioteki statytczne LabPlot
+Biblioteki statyczne LabPlot.
 
 %prep
 %setup -q
