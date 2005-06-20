@@ -41,9 +41,6 @@ export kde_htmldir=%{_kdedocdir}
 export kde_libs_htmldir=%{_kdedocdir}
 cp -f /usr/share/automake/config.sub admin
 %configure \
-%ifarch %{x8664} sparc sparc64 ppc ppc64
-	--disable-cdf \
-%endif
 	--with-qt-libraries=%{_libdir}
 %{__make}
 
