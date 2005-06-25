@@ -72,7 +72,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_desktopdir}/LabPlot.desktop
 %{_datadir}/mimelnk/application/x-lpl.desktop
 %{_datadir}/apps/LabPlot
-%{_iconsdir}/*/*/*/*.png
+%{_iconsdir}/hicolor/*/*/*.png
 %{_mandir}/man?/*
 
 %files static
