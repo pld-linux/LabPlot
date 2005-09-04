@@ -1,12 +1,12 @@
 Summary:	Function and Data Plotter
 Summary(pl):	Wykre¶lacz funkcji i danych
 Name:		LabPlot
-Version:	1.4.1
+Version:	1.5.0.1
 Release:	1
 License:	GPL
 Group:		Applications/Math
 Source0:	http://dl.sourceforge.net/labplot/%{name}-%{version}.tar.bz2
-# Source0-md5:	b19839478f2c95880c57aaad7b4e05e7
+# Source0-md5:	8b0135deef37f37fecac738fe7c021de
 URL:		http://labplot.sourceforge.net/
 BuildRequires:	ImageMagick-c++-devel
 BuildRequires:	automake
@@ -34,7 +34,7 @@ LabPlot static libraries.
 Biblioteki statyczne LabPlot.
 
 %prep
-%setup -q
+%setup -q -n %{name}-1.5.0
 
 %build
 export kde_htmldir=%{_kdedocdir}
