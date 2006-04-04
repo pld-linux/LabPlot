@@ -1,12 +1,12 @@
 Summary:	Function and Data Plotter
 Summary(pl):	Wykre¶lacz funkcji i danych
 Name:		LabPlot
-Version:	1.5.0.5
+Version:	1.5.1
 Release:	1
 License:	GPL
 Group:		Applications/Math
 Source0:	http://dl.sourceforge.net/labplot/%{name}-%{version}.tar.bz2
-# Source0-md5:	79184224b96fef787ef70a33159b9992
+# Source0-md5:	7847cb58e05efa0d8abf1ab38b784fa5
 URL:		http://labplot.sourceforge.net/
 BuildRequires:	ImageMagick-c++-devel >= 1:6.2.4.0
 BuildRequires:	automake
@@ -34,7 +34,7 @@ LabPlot static libraries.
 Biblioteki statyczne LabPlot.
 
 %prep
-%setup -q -n %{name}-1.5.0
+%setup -q 
 
 %build
 # compiled binaries & objects
@@ -54,8 +54,6 @@ install -d $RPM_BUILD_ROOT%{_desktopdir}
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-mv $RPM_BUILD_ROOT%{_datadir}/applnk/Applications/LabPlot.desktop $RPM_BUILD_ROOT%{_desktopdir}
-
 rm -f $RPM_BUILD_ROOT%{_mandir}/man1/labplot.1
 echo ".so LabPlot.1" > $RPM_BUILD_ROOT%{_mandir}/man1/labplot.1
 
@@ -71,8 +69,10 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README TODO INSTALL ChangeLog CHANGES FEATURES LabPlot.lsm
 %attr(755,root,root) %{_bindir}/LabPlot
+%attr(755,root,root) %{_bindir}/opj2dat
+%attr(755,root,root) %{_bindir}/texvc
 %attr(755,root,root) %{_libdir}/lib*.so.*.*.*
-%{_desktopdir}/LabPlot.desktop
+%{_desktopdir}/kde/LabPlot.desktop
 %{_datadir}/mimelnk/application/x-lpl.desktop
 %{_datadir}/apps/LabPlot
 %{_iconsdir}/hicolor/*/*/*.png
