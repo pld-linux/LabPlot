@@ -1,5 +1,5 @@
 Summary:	Function and Data Plotter
-Summary(pl):	Wykre∂lacz funkcji i danych
+Summary(pl.UTF-8):   Wykre≈õlacz funkcji i danych
 Name:		LabPlot
 Version:	1.5.1
 Release:	1
@@ -19,18 +19,18 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 This is a program for plotting of functions and data manipulation.
 
-%description -l pl
-Program do wykre∂lania funkcji oraz manipulacji na danych.
+%description -l pl.UTF-8
+Program do wykre≈õlania funkcji oraz manipulacji na danych.
 
 %package static
 Summary:	LabPlot static libraries
-Summary(pl):	Biblioteki statyczne LabPlot
+Summary(pl.UTF-8):   Biblioteki statyczne LabPlot
 Group:		Development/Libraries
 
 %description static
 LabPlot static libraries.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Biblioteki statyczne LabPlot.
 
 %prep
