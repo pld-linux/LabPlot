@@ -1,5 +1,5 @@
 Summary:	Function and Data Plotter
-Summary(pl.UTF-8):   Wykreślacz funkcji i danych
+Summary(pl.UTF-8):	Wykreślacz funkcji i danych
 Name:		LabPlot
 Version:	1.5.1
 Release:	1
@@ -24,7 +24,7 @@ Program do wykreślania funkcji oraz manipulacji na danych.
 
 %package static
 Summary:	LabPlot static libraries
-Summary(pl.UTF-8):   Biblioteki statyczne LabPlot
+Summary(pl.UTF-8):	Biblioteki statyczne LabPlot
 Group:		Development/Libraries
 
 %description static
