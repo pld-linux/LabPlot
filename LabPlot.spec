@@ -1,12 +1,12 @@
 Summary:	Function and Data Plotter
 Summary(pl.UTF-8):	Wykreślacz funkcji i danych
 Name:		LabPlot
-Version:	1.6.0
+Version:	1.6.0.2
 Release:	1
 License:	GPL
 Group:		Applications/Math
 Source0:	http://dl.sourceforge.net/labplot/%{name}-%{version}.tar.bz2
-# Source0-md5:	d5b66cc85c89e490fd0147e6be20801e
+# Source0-md5:	59a9448190b2ebc9b23670f9262a1947
 URL:		http://labplot.sourceforge.net/
 BuildRequires:	ImageMagick-c++-devel >= 1:6.2.4.0
 BuildRequires:	automake
