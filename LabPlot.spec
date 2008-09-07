@@ -14,6 +14,7 @@ BuildRequires:	fftw3-devel
 BuildRequires:	gsl-devel
 BuildRequires:	kdelibs-devel
 BuildRequires:	rpmbuild(macros) >= 1.213
+Suggests:	qhull
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -69,7 +70,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README TODO INSTALL ChangeLog CHANGES FEATURES LabPlot.lsm
 %attr(755,root,root) %{_bindir}/LabPlot
-%attr(755,root,root) %{_bindir}/qdelaunay
 %attr(755,root,root) %{_libdir}/lib*.so.*.*.*
 %{_desktopdir}/kde/LabPlot.desktop
 %{_datadir}/mimelnk/application/x-lpl.desktop
